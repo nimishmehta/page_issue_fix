@@ -18,6 +18,7 @@
         height: 3508px;
         width: 2480px;
         background: green;
+        position: relative;
       }
 
       .page.two {
@@ -27,13 +28,30 @@
       .page.three {
         background: blue;
       }
+      .overflow_content {
+        position: absolute;
+        top: 40%;
+        width: 400px;
+        height: 400px;
+        background: red;
+        left: -200px;
+        text-align: right;
+    }
+    .overflow_content.two {
+      right: -200px;
+      text-align: left;
+      background: blue;
+      left: auto;
+    }
     </style>
   </head>
   <body>
     <div class="page">
         <div class="overflow_content">Some big box overflows</div>
     </div>
-    <div class="page two"></div>
+    <div class="page two">
+      <div class="overflow_content two">Some big box overflows</div>
+    </div>
     <div class="page three"></div>
   </body>
 </html>
